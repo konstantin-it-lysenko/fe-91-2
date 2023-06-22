@@ -271,7 +271,9 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-btn">Leave a review</button>
+          <button type="button" class="loved-btn" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -323,5 +325,58 @@
         </nav>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-cross" width="8" height="8">
+            <use href="./images/cross.svg#cross"></use>
+          </svg>
+        </button>
+
+        <p class="modal-title section-title">
+          LEAVE A REVIEW ABOUT
+          <span class="footer-title-secondary">OUR CHOCOLATE</span>
+        </p>
+
+        <form action="" class="modal-form">
+          <input
+            type="text"
+            name="user-name"
+            class="modal-input"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            name="user-email"
+            class="modal-input"
+            placeholder="Email"
+          />
+          <input
+            type="tel"
+            name="user-tel"
+            class="modal-input"
+            placeholder="Phone Number"
+            required
+          />
+          <textarea
+            name="modal-text"
+            class="modal-textarea"
+            placeholder="Enter text"
+          ></textarea>
+          <input
+            type="checkbox"
+            name="policy"
+            class="input-check"
+            id="privacy"
+            value="true"
+          />
+          <button class="modal-submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
